@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
         HeroesViewModel model = new ViewModelProvider(this).get(HeroesViewModel.class);
 
-        model.getHeroes().observe(this, new Observer<List<Hero>>() {
+        model.loadHeroes();
+
+        model.heroList.observe(this, new Observer<List<Hero>>() {
             @Override
             public void onChanged(List<Hero> heroes) {
                 adapter.setHeroes(heroes);

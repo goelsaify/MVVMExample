@@ -7,17 +7,17 @@ public class Hero {
     private String firstAppearance;
     private String createdBy;
     private String publisher;
-    private String imageUrl;
+    private String imageurl;
     private String bio;
 
-    public Hero(String name, String realName, String team, String firstAppearance, String createdBy, String publisher, String imageUrl, String bio) {
+    public Hero(String name, String realName, String team, String firstAppearance, String createdBy, String publisher, String imageurl, String bio) {
         this.name = name;
         this.realName = realName;
         this.team = team;
         this.firstAppearance = firstAppearance;
         this.createdBy = createdBy;
         this.publisher = publisher;
-        this.imageUrl = imageUrl;
+        this.imageurl = imageurl;
         this.bio = bio;
     }
 
@@ -46,7 +46,7 @@ public class Hero {
     }
 
     public String getImageUrl() {
-        return imageUrl;
+        return imageurl;
     }
 
     public String getBio() {

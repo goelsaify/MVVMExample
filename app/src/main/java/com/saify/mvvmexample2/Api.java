@@ -8,7 +8,7 @@ import retrofit2.http.GET;
 
 public interface Api {
 
-    String BASE_URL = "https://www.simplifiedcoding.net/demos/marvel/";
+    String BASE_URL = "https://www.simplifiedcoding.net/demos/";
 
     @GET("marvel")
     Call<List<Hero>> getHeroes();

@@ -18,18 +18,9 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HeroesViewModel extends ViewModel {
-    private MutableLiveData<List<Hero>> heroList;
+    public MutableLiveData<List<Hero>> heroList = new MutableLiveData<List<Hero>>();
 
-    public LiveData<List<Hero>> getHeroes(){
-        if(heroList == null){
-            heroList = new MutableLiveData<List<Hero>>();
-
-            loadHeroes();
-        }
-        return heroList;
-    }
-
-    public void loadHeroes(){
+    public void loadHeroes() {
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Api.BASE_URL)
